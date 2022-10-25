@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 // const helpers = require('./utils');
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 
 // Set up sessions
 
@@ -20,6 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+// sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
-});
+// });
