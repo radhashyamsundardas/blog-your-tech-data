@@ -15,13 +15,13 @@ const PORT = process.env.PORT || 3001;
 
 
 const hbs = exphbs.create({helpers});
-const session = {
+const sess = {
   secret: 'Tech blog secret',
   cookie: {},
   resave: false,
   saveUnintialized: true,
   store: new sequelizeStore({
-    db.sequelize
+    db:sequelize
   })
 };
 
