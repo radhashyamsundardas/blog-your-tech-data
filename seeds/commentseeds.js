@@ -1,4 +1,4 @@
-const Comment =  require('../models');
+const {Comment} =  require('../models');
 
 const commInfo = [{
     comment_text: 'This is assignment 14',
