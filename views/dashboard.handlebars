@@ -1,0 +1,15 @@
+<h2>POSTS</h2>
+
+<button>SUBMIT><a class="link" href="/views/dashboard.handlebars"></a>NEW POST</button>
+<section>
+    {{#if posts.length}}
+
+    {{#each posts as |post|}}
+    {{dashboard-postinfo post}}
+    {{/each}}
+
+    {{/if}}
+
+</section>
+
+<script> src="./js/post.js"</script>
