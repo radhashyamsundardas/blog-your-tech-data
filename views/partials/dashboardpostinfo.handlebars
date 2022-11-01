@@ -1,0 +1,17 @@
+<div class="card mb-9">
+    <div class="column">
+        <p class="has-text"></p>
+        <a href="./postitem.handlebars/">{{title}}</a>
+    </div>
+
+    <div class="card-content">
+        <div>
+            {{post_content}}
+        </div>
+        <div>
+            <b>{{user.username}}</b> |
+            <a href="https://github.com/{{user.github}}"></a>
+            | {{format_date created_at}} | <a href="/post/{{id}}"><{{comment.length}}{{format_plural "comment" comment.length}}/a>
+        </div>
+    </div>
+</div>
