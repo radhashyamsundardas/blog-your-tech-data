@@ -5,9 +5,9 @@ async function newFormHandler (event){
     event.preventDefault();
 
     const title = document.getElementById('input[name="post-title"]').value;
-    const info = document.getElementById('input[name="info"]')
+    const info = document.getElementById('input[name="info"]').value;
 
-    const answer = await fetch ('/api/postroute', {
+    const response = await fetch ('/api/postroute', {
         method: 'POST',
         body: JSON.stringify({
             title,
