@@ -21,9 +21,9 @@ async function editFormHandler (event){
             }
         });
         if (response.ok){
-            document.location.replace('/dashboard/');
+            document.location.replace('/dashboard');
         } else{
             alert(response.statusText);
         }
     }
-document.getElementById('.edit-post-form').addEventListener('submit', editFormHandler);
+document.getElementById('.edit-post-form').addEventListener('submit', editFormHandler)
