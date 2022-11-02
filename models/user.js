@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require("sequelize")
 
-const {Model, DataTypes} = require('sequelize');
-const { INITIALLY_DEFERRED } = require("sequelize/types/deferrable");
+// const { INITIALLY_DEFERRED } = require("sequelize/types/deferrable");
 const sequelize = require('../config/connection');
 
 class User extends Model{
