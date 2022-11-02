@@ -13,3 +13,28 @@ router.get('/', async (req,res) => {
         res.status(500).json(err);
     }
 });
+
+
+router.get('/post/:id',withAuth, async (req,res) => {
+    try{
+        const postInfo = await Post.findOne({
+            where: {id: req.params.id},
+            include:[
+                User,{
+                    model:Comment,
+                    include: [User],
+                },
+            ],
+        });
+
+        if (postData){
+            const posts= postInfo.get({ plain: true});
+            console.log(posts)
+            res.render('single-post', {posts, loggedIn: req.session.loggedIn});
+        } else {
+            res.sendStatus(400).end();
+        }
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
