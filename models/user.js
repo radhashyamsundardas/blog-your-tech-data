@@ -1,4 +1,6 @@
 const { Model, DataTypes } = require("sequelize")
+const bcrypt = require('bcrypt');
+// const Sequelize = require('../config/connection');
 
 // const { INITIALLY_DEFERRED } = require("sequelize/types/deferrable");
 const sequelize = require('../config/connection');
